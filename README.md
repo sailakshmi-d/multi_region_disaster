@@ -1,6 +1,6 @@
 
 
-# Project Documentation: Multi-Region Disaster Recovery Solution on AWS using Terraform
+# Project Documentation: Multi-Region Disaster Recovery on AWS using Terraform
 =
 ---
 
@@ -52,7 +52,7 @@ To design and implement a **multi-region disaster recovery (DR) architecture** u
 
 ##  **Implementation Steps**
 
-### 🔹 Phase 1: VPC and Networking (in Both Regions)
+###  Phase 1: VPC and Networking (in Both Regions)
 
 1. Create custom VPCs in **us-east-1** and **us-west-1**.
 2. Define public and private subnets.
@@ -61,14 +61,14 @@ To design and implement a **multi-region disaster recovery (DR) architecture** u
 
 ---
 
-### 🔹 Phase 2: S3 Buckets
+### Phase 2: S3 Buckets
 
 1. Create **S3 Bucket in Primary Region (us-east-1)** for hosting static files.
 2. Create **S3 Bucket in DR Region (us-west-1)** for replication.
    
 ---
 
-### 🔹 Phase 3: Compute Layer – EC2, ALB, ASG
+###  Phase 3: Compute Layer – EC2, ALB, ASG
 
 1. Create **Launch Templates** with `user_data` to pull static site from S3.
 2. Create **Auto Scaling Groups (ASG)** in both regions using Launch Templates.
@@ -77,7 +77,7 @@ To design and implement a **multi-region disaster recovery (DR) architecture** u
 
 ---
 
-### 🔹 Phase 4: Database – RDS with Cross-Region Read Replica (Optional)
+###  Phase 4: Database – RDS with Cross-Region Read Replica (Optional)
 
 1. Deploy **RDS MySQL in private subnets** in the primary region.
 2. Create **RDS Cross-Region Read Replica** in DR region.
@@ -85,7 +85,7 @@ To design and implement a **multi-region disaster recovery (DR) architecture** u
 
 ---
 
-### 🔹 Phase 5: DNS and Failover with Route 53
+### Phase 5: DNS and Failover with Route 53
 
 1. Buy/register domain (e.g., `myfab.space`).
 2. Create **Route 53 Hosted Zone** for the domain.
@@ -98,7 +98,7 @@ To design and implement a **multi-region disaster recovery (DR) architecture** u
 
 ---
 
-### 🔹 Phase 6: Terraform Structure and Deployment
+### Phase 6: Terraform Structure and Deployment
 
 **Organize Terraform into modules/files:**
 

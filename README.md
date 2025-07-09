@@ -1,6 +1,6 @@
 
 
-# Project Documentation: Multi-Region Disaster Recovery on AWS using Terraform
+#  Multi-Region Disaster Recovery on AWS using Terraform
 =
 ---
 
@@ -30,8 +30,16 @@ To design and implement a **multi-region disaster recovery (DR) architecture** u
                     |  S3 w/ CRR        | --> | S3 Bucket      |
                     |  RDS (Primary)    | --> | RDS (Replica)  |
                     --------------------     ------------------
-```
 
+
+
+
+
+```
+  ![image](https://github.com/user-attachments/assets/f0c3ca65-a11d-4d64-9de7-c33608a4480d)
+
+
+It is designed to provide high availability and disaster recovery for a web application by distributing its components across two separate AWS region .It ensures that if the primary region becomes unavailable, traffic can be automatically failed over to a secondary region with minimal data loss and downtime .
 ---
 
 ## **AWS Services Used**
